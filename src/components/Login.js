@@ -16,18 +16,19 @@ const SignUp = () => {
     setIsSignIn(!isSignIn);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (role) => {
     if (isSignIn) {
       setCredentials({
         email: email.current.value,
         password: password.current.value,
+        role: role,
       });
     } else {
       setCredentials({
         name: name.current.value,
         email: email.current.value,
         password: password.current.value,
+        role: role,
       });
     }
     try {
@@ -60,7 +61,9 @@ const SignUp = () => {
   return (
     <div>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
         className="w-3/12 absolute p-10 border-2 flex flex-col gap-y-5 my-44 mx-auto right-0 left-0 justify-center"
       >
         {!isSignIn && (
@@ -83,12 +86,20 @@ const SignUp = () => {
           placeholder="Enter Password"
           className="p-2 bg-gray-200"
         />
-        <button
-          onClick={handleSubmit}
-          className="bg-blue-500 mx-auto w-32 p-2 rounded-lg text-white"
-        >
-          {isSignIn ? "Sign In" : "Sign Up"}
-        </button>
+        <div className="flex gap-x-2">
+          <button
+            onClick={() => handleSubmit("Farmer")}
+            className="bg-blue-500 mx-auto w-32 p-2 rounded-lg text-white"
+          >
+            {isSignIn ? "Sign In as Farmer" : "Sign Up as Farmer"}
+          </button>
+          <button
+            onClick={() => handleSubmit("Customer")}
+            className="bg-blue-500 mx-auto w-32 p-2 rounded-lg text-white"
+          >
+            {isSignIn ? "Sign In as Customer" : "Sign Up as Customer"}
+          </button>
+        </div>
         <div className="flex gap-2">
           {isSignIn ? <p>New User?</p> : <p>Already Registered?</p>}
 
