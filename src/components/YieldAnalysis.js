@@ -1,5 +1,12 @@
+import Footer from "./Footer";
+import Header from "./Header";
+
 export const YieldAnalysis = () => {
   return (
-    <div>YieldAnalysis</div>
-  )
-}
+    <div>
+      <Header />
+      YieldAnalysis
+      <Footer />
+    </div>
+  );
+};

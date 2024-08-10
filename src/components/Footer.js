@@ -18,7 +18,7 @@ const Footer = () => {
           </li>
         </li>
       </div> */}
-      <footer className="bg-gray-800 text-gray-300 py-8">
+      <footer className="bg-gray-800 text-gray-300 py-8 relative left-0 right-0 bottom-0 ">
         <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row justify-between">
           <div className="mb-8 md:mb-0 md:w-1/3">
             <h2 className="text-xl font-semibold text-white mb-4">About Us</h2>

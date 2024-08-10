@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "./ProductCard";
 import { clearCart, removeFromCart } from "../redux/cartSlice";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Cart = () => {
   const cartItem = useSelector((store) => store.cart);
@@ -13,6 +15,7 @@ const Cart = () => {
   };
   return (
     <div>
+      <Header />
       <div>
         {cartItem.map((cartitem) => (
           <div>
@@ -29,6 +32,7 @@ const Cart = () => {
       >
         Clear Cart
       </button>
+      <Footer />
     </div>
   );
 };

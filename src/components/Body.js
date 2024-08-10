@@ -7,6 +7,7 @@ import { YieldAnalysis } from "./YieldAnalysis";
 import Shop from "./Shop";
 import About from "./About";
 import Contact from "./Contact";
+import Cart from "./Cart";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -14,23 +15,23 @@ const Body = () => {
       path: "/",
       element: <Home />,
       children: [
-        {
-          path: "/browse",
-          element: <Browse />,
-        },
-        {
-          path: "/yield-analysis",
-          element: <YieldAnalysis />,
-        },
-        {
-          path: "/shop",
-          element: <Shop />,
-        },
         // {
         //   path: "/login",
         //   element: <Login />,
         // },
       ],
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
+    },
+    {
+      path: "/shop",
+      element: <Shop />,
+    },
+    {
+      path: "/yield-analysis",
+      element: <YieldAnalysis />,
     },
     {
       path: "/about",
