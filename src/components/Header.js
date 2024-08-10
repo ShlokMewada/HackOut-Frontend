@@ -9,7 +9,7 @@ const Header = () => {
     dispatch(removeUser());
   };
   return (
-    <div className="p-8 bg-gradient-to-b from-black absolute">
+    <div className="w-full p-6 bg-gradient-to-b from-black absolute z-10">
       <ul className="flex justify-between">
         <li>
           <Link to="/" className="text-xl font-bold text-white">
