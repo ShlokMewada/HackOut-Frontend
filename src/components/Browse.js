@@ -19,17 +19,17 @@ const Browse = () => {
       }}>
         <div style={{ 
           position: "absolute", 
-          top: "50%", 
+          top: "60%", 
           left: "75%", 
           transform: "translate(-50%, -50%)", 
           textAlign: "center", 
-          color: "green"
-        }}>
-          <h1 style={{ fontSize: "2em", marginBottom: "20px" }}>Get Started Predicting Your Yield</h1>
+          color:"white"
+        }} >
+          <h1 style={{ fontSize: "2em", marginBottom: "20px"}} >Get Started Predicting Your Yield</h1>
           <button style={{
             padding: "10px 20px",
             fontSize: "1.2em",
-            backgroundColor: "#007BFF",
+            backgroundColor: "lightblue",
             color: "white",
             border: "none",
             borderRadius: "5px",
