@@ -14,10 +14,10 @@ const Body = () => {
           path: "/browse",
           element: <Browse />,
         },
-        {
-          path: "/login",
-          element: <Login />,
-        },
+        // {
+        //   path: "/login",
+        //   element: <Login />,
+        // },
       ],
     },
   ]);
