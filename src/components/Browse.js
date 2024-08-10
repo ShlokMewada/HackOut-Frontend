@@ -1,7 +1,11 @@
+
+
 import React from "react";
 import image1 from "../assest/image1.jpg";
 import { Link } from "react-router-dom";
-
+import image2 from "../assest/image2.jpg";
+import image3 from "../assest/image3.jpeg";
+import image4 from "../assest/image4.jpg";
 const Browse = () => {
   return (
     <div>
@@ -42,10 +46,9 @@ const Browse = () => {
 
       {/* First Text Section */}
       <div style={{ maxWidth: "800px", margin: "20px auto",padding: "20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2em", marginBottom: "15px" }}>First Section Title</h2>
+        <h2 style={{ fontSize: "2em", marginBottom: "15px"  }} >AgroPredict</h2>
         <p style={{ fontSize: "1.2em", lineHeight: "1.6", color: "#555" }}>
-          This is the first text section. You can describe the content or provide information related to the image above. 
-          The text is centered and styled for readability.
+        The project aims to predict whether the weather conditions will enable successful crop yields for farmers. Additionally, it offers insights into the potential for farmers to sell their goods effectively.
         </p>
       </div>
 
@@ -53,18 +56,23 @@ const Browse = () => {
       <div style={{ 
         width: "100%", 
         height: "80vh", 
-        backgroundImage: "url('https://via.placeholder.com/1920x1080')", 
+        backgroundImage: `url(${image2})`, 
         backgroundSize: "cover", 
         backgroundPosition: "center", 
         backgroundRepeat: "no-repeat"
       }}>
+          
+        
+
+
       </div>
 
       {/* Second Text Section */}
       <div style={{ maxWidth: "800px", margin: "20px auto", padding: "20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2em", marginBottom: "15px" }}>Second Section Title</h2>
+        <h2 style={{ fontSize: "2em", marginBottom: "15px" }}>Continues Help to the farmers</h2>
         <p style={{ fontSize: "1.2em", lineHeight: "1.6", color: "#555" }}>
-          This is the second text section. Continue to elaborate on the content, provide additional details, or any other information that relates to the second image.
+          
+Helping farmers by analyzing soil health, providing weather forecasts, predicting crop impact, and offering guidance on planting, harvesting, and pest control to improve crop yield and sustainability
         </p>
       </div>
 
@@ -72,7 +80,7 @@ const Browse = () => {
       <div style={{ 
         width: "100%", 
         height: "80vh", 
-        backgroundImage: "url('https://via.placeholder.com/1920x1080')", 
+        backgroundImage: `url(${image3})`, 
         backgroundSize: "cover", 
         backgroundPosition: "center", 
         backgroundRepeat: "no-repeat"
@@ -81,9 +89,10 @@ const Browse = () => {
 
       {/* Third Text Section */}
       <div style={{ maxWidth: "800px", margin: "40px auto", padding: "20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2em", marginBottom: "15px" }}>Third Section Title</h2>
+        <h2 style={{ fontSize: "2em", marginBottom: "15px" }}>Farmer can Sell Their product</h2>
         <p style={{ fontSize: "1.2em", lineHeight: "1.6", color: "#555" }}>
-          This is the third text section. Continue to elaborate on the content, provide additional details, or any other information that relates to the third image.
+         
+Farmers can list and sell their crops directly through our platform, allowing customers to purchase fresh, locally-grown produce with ease. Enjoy quality farm-fresh goods delivered straight to your table
         </p>
       </div>
 
@@ -91,7 +100,7 @@ const Browse = () => {
       <div style={{ 
         width: "100%", 
         height: "80vh", 
-        backgroundImage: "url('https://via.placeholder.com/1920x1080')", 
+        backgroundImage: `url(${image4})`, 
         backgroundSize: "cover", 
         backgroundPosition: "center", 
         backgroundRepeat: "no-repeat"
