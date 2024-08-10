@@ -8,29 +8,34 @@ const ProductCard = ({ productData }) => {
   const addItem = () => {
     dispatch(addToCart(productData));
   };
+
   return (
-    <div>
-      <div className="flex w-[400px] flex-col gap-y-2 items-center hover:scale-105 transition-all duration-200 justify-center border-2 border-blue-600 rounded-lg p-4">
-        <img src="" alt="" />
-        <h1>Product Name</h1>
-        <p>Product decription</p>
-        <p>Product Price</p>
-        <div className="flex gap-x-2">
-          <button
-            className="text-xl p-2 font-semibold border-2 bg-yellow-500 rounded-lg"
-            onClick={() => {
-              console.log("purchase method will come here");
-            }}
-          >
-            Purchase
-          </button>
-          <button
-            onClick={addItem}
-            className="flex gap-x-1 items-baseline p-2 border-2 bg-green-600 rounded-lg"
-          >
-            <p className="text-xl font-semibold">Add</p>
-            <i className="fa-solid fa-plus fa-lg"></i>
-          </button>
+    <div className="p-4">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 w-[400px]">
+        <img src="" alt="" className="w-full h-48 object-cover" />
+        <div className="p-4 flex flex-col items-center">
+          <h1 className="text-xl font-semibold text-gray-800 mb-2">
+            Product Name
+          </h1>
+          <p className="text-gray-600 mb-2">Product description</p>
+          <p className="text-lg font-bold text-gray-800 mb-4">Product Price</p>
+          <div className="flex gap-x-3">
+            <button
+              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75 transition-colors duration-300"
+              onClick={() => {
+                console.log("purchase method will come here");
+              }}
+            >
+              Purchase
+            </button>
+            <button
+              onClick={addItem}
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg shadow-md flex items-center focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 transition-colors duration-300"
+            >
+              <p className="mr-2">Add</p>
+              <i className="fa-solid fa-plus"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

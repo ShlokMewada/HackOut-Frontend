@@ -5,6 +5,8 @@ import Login from "./Login";
 import Home from "./Home";
 import { YieldAnalysis } from "./YieldAnalysis";
 import Shop from "./Shop";
+import About from "./About";
+import Contact from "./Contact";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -29,6 +31,14 @@ const Body = () => {
         //   element: <Login />,
         // },
       ],
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
     },
   ]);
   return (
