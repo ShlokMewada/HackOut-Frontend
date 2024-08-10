@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Browse from "./Browse";
 import Login from "./Login";
 import Home from "./Home";
+import { YieldAnalysis } from "./YieldAnalysis";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -13,6 +14,10 @@ const Body = () => {
         {
           path: "/browse",
           element: <Browse />,
+        },
+        {
+          path: "/yield-analysis",
+          element: <YieldAnalysis />,
         },
         // {
         //   path: "/login",

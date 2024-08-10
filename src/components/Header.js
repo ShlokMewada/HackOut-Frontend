@@ -17,6 +17,11 @@ const Header = () => {
           </Link>
         </li>
         <li>
+          <Link to="/yield-analysis" className="text-xl font-bold text-white">
+            Yield Analysis
+          </Link>
+        </li>
+        <li>
           <Link to="/" className="text-xl font-bold text-white">
             About Us
           </Link>
