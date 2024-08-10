@@ -25,14 +25,14 @@ const Browse = () => {
           textAlign: "center", 
           color:"white"
         }} >
-          <h1 style={{ fontSize: "2em", marginBottom: "20px"}} >Get Started Predicting Your Yield</h1>
+          <h1 style={{ fontSize: "2.5em", marginBottom: "20px"}} >Get Started Predicting Your Yield</h1>
           <button style={{
             padding: "10px 20px",
             fontSize: "1.2em",
-            backgroundColor: "lightblue",
+            backgroundColor: "#331eed",
             color: "white",
             border: "none",
-            borderRadius: "5px",
+            borderRadius: "40px",
             cursor: "pointer"
           }}>
             <Link to="/some-page" style={{ color: "white", textDecoration: "none" }}>Get Started</Link>
