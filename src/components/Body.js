@@ -4,6 +4,7 @@ import Browse from "./Browse";
 import Login from "./Login";
 import Home from "./Home";
 import { YieldAnalysis } from "./YieldAnalysis";
+import Shop from "./Shop";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -18,6 +19,10 @@ const Body = () => {
         {
           path: "/yield-analysis",
           element: <YieldAnalysis />,
+        },
+        {
+          path: "/shop",
+          element: <Shop />,
         },
         // {
         //   path: "/login",
