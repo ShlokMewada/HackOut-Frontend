@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeUser } from "../redux/userSlice";
-
+import logo from "../assest/logo.png"
 const Header = () => {
   const dispatch = useDispatch();
   const handleSignOut = () => {
@@ -9,9 +9,9 @@ const Header = () => {
     dispatch(removeUser());
   };
   return (
-    <div className="w-full flex justify-between p-6 bg-gradient-to-b from-black absolute z-10">
+    <div className="w-full flex justify-between items-center p-6 bg-gradient-to-b from-black absolute z-10">
       <div>
-        <img src="C:\Users\HyderAli\OneDrive\Desktop\HackOut-Frontend\HackOut-Frontend\src\assest\logo-removebg-preview.png" alt="logo"/>
+        <img className="w-60 	margin-top: 0px;" src={logo} alt="logo"/>
       </div>
       <div>
         <ul className="flex gap-x-20">
