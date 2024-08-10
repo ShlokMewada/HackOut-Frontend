@@ -6,7 +6,6 @@ import addUser from "../redux/userSlice";
 const SignUp = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [credentials, setCredentials] = useState();
-  const [role, setRole] = useState();
   const name = useRef();
   const email = useRef();
   const password = useRef();
@@ -89,13 +88,13 @@ const SignUp = () => {
         />
         <div className="flex gap-x-2">
           <button
-            onClick={() => handleSubmit(setRole("Farmer"))}
+            onClick={() => handleSubmit("Farmer")}
             className="bg-blue-500 mx-auto w-32 p-2 rounded-lg text-white"
           >
             {isSignIn ? "Sign In as Farmer" : "Sign Up as Farmer"}
           </button>
           <button
-            onClick={() => handleSubmit(setRole("Customer"))}
+            onClick={() => handleSubmit("Customer")}
             className="bg-blue-500 mx-auto w-32 p-2 rounded-lg text-white"
           >
             {isSignIn ? "Sign In as Customer" : "Sign Up as Customer"}
