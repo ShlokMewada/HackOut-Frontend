@@ -9,37 +9,42 @@ const Header = () => {
     dispatch(removeUser());
   };
   return (
-    <div className="w-full p-6 bg-gradient-to-b from-black absolute z-10">
-      <ul className="flex justify-between">
-        <li>
-          <Link to="/" className="text-xl font-bold text-white">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/shop" className="text-xl font-bold text-white">
-            Shop
-          </Link>
-        </li>
-        <li>
-          <Link to="/yield-analysis" className="text-xl font-bold text-white">
-            Yield Analysis
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className="text-xl font-bold text-white">
-            Cart
-          </Link>
-        </li>
-        <li>
-          <button
-            onClick={handleSignOut}
-            className="text-xl font-bold text-white"
-          >
-            Sign Out
-          </button>
-        </li>
-      </ul>
+    <div className="w-full flex justify-between p-6 bg-gradient-to-b from-black absolute z-10">
+      <div>
+        <img src="C:\Users\HyderAli\OneDrive\Desktop\HackOut-Frontend\HackOut-Frontend\src\assest\logo-removebg-preview.png" alt="logo"/>
+      </div>
+      <div>
+        <ul className="flex gap-x-20">
+          <li>
+            <Link to="/" className="text-xl font-bold text-white hover:underline">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop" className="text-xl font-bold text-white hover:underline">
+              Shop
+            </Link>
+          </li>
+          <li>
+            <Link to="/yield-analysis" className="text-xl font-bold text-white hover:underline">
+              Yield Analysis
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="text-xl font-bold text-white hover:underline">
+              Cart
+            </Link>
+          </li>
+          <li>
+            <button
+              onClick={handleSignOut}
+              className="text-xl font-bold text-white hover:underline"
+            >
+              Sign Out
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
