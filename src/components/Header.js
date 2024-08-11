@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <div className="w-full flex justify-between items-center p-6 bg-gradient-to-b from-black absolute z-10">
       <div>
-        <img className="w-60 	margin-top: 0px;" src={logo} alt="logo" />
+        <Link to="/">
+          <img className="w-60 	margin-top: 0px;" src={logo} alt="logo" />
+        </Link>
       </div>
       <div>
         <ul className="flex gap-x-20">
@@ -62,7 +64,6 @@ const Header = () => {
 };
 
 export default Header;
-
 
 // import { useDispatch } from "react-redux";
 // import { Link } from "react-router-dom";
