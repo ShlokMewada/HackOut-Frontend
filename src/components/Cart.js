@@ -74,7 +74,7 @@ const Cart = () => {
                     onClick={() => deleteCartItem(cartItem.name)}
                     className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full p-2 transition-colors duration-300"
                   >
-                    <i className="fas fa-trash"></i>
+                    <i className="fa-solid fa-trash"></i>
                   </button>
                 </div>
               ))}
