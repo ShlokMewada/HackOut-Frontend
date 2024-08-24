@@ -21,20 +21,61 @@
 
 // export default Shop;
 
-
 import { useDispatch } from "react-redux";
 import Footer from "./Footer";
 import Header from "./Header";
 import ProductCard from "./ProductCard";
+import { useEffect } from "react";
 
 const Shop = () => {
   // Assume we have a list of products
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const products = [
-    { id: 1, name: "Organic Fertilizer", description: "Description 1", price: 500, image: "https://cdn.cdnparenting.com/articles/2021/07/16191322/380433403.webp" },
-    { id: 2, name: "Crops Seed", description: "Description 2", price: 700, image: "https://articles-1mg.gumlet.io/articles/wp-content/uploads/2016/12/seeds.jpg?compress=true&quality=80&w=640&dpr=2.6" },
+    {
+      id: 1,
+      name: "Organic Fertilizer",
+      description: "Description 1",
+      price: 500,
+      image:
+        "https://cdn.cdnparenting.com/articles/2021/07/16191322/380433403.webp",
+    },
+    {
+      id: 2,
+      name: "Crops Seed",
+      description: "Description 2",
+      price: 700,
+      image:
+        "https://articles-1mg.gumlet.io/articles/wp-content/uploads/2016/12/seeds.jpg?compress=true&quality=80&w=640&dpr=2.6",
+    },
     // Add more products as needed
   ];
+
+  // const fetchData = async () => {
+  //   const response = await fetch("http://127.0.0.1:8000/api/v1/product/");
+  //   const data = await response.json();
+  //   console.log(data);
+  // };
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/v1/product/");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
